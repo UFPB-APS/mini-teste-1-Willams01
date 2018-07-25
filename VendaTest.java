@@ -59,10 +59,11 @@ public class VendaTest
         itemVend2.setProduto(produto2);
         itemVend2.setQuantidade(1);
         venda1.addNoCarrinho(itemVend2, 1);
+        String tipo = "Imposto Sobre Venda";
 
-        assertEquals(2625, logica.calcularTotal(venda1), 0.1);
+        assertEquals(2625.0, logica.calcularTotal(tipo,venda1), 0.1);
     }
-
+    
     @Test
     public void vendaComSeguro()
     {
@@ -73,13 +74,16 @@ public class VendaTest
         itemVend1.setQuantidade(100);
         venda1.addNoCarrinho(itemVend1, 0);
 
-        Seguro seguro1 = new Seguro("Porto Seguro", 0.02);
+        CustoGenerico seguro1 = new CustoGenerico("Porto Seguro", 0.02);
         logica.setSeguro(seguro1);
-        assertEquals(10.71, logica.calcularTotal(venda1), 0.1);
-
-        Seguro seguro2 = new Seguro("Mapfre", 0.015);
+        String tipo = "Seguro";
+        assertEquals(10.2, logica.calcularTotal(tipo,venda1), 0.1);
+      
+        
+        CustoGenerico seguro2 = new CustoGenerico("Mapfre", 0.015);
         logica.setSeguro(seguro2);
-        assertEquals(10.66, logica.calcularTotal(venda1), 0.1);
+      
+        assertEquals(10.15, logica.calcularTotal(tipo,venda1), 0.1);
     }
 
     @Test
@@ -91,9 +95,8 @@ public class VendaTest
         itemVend1.setProduto(produto1);
         itemVend1.setQuantidade(10);
         venda2.addNoCarrinho(itemVend1, 0);
-        
-        assertEquals(73500, logica.calcularTotal(venda2), 0.1);
-
+        String tipo = "Imposto Sobre Venda";
+        assertEquals(73500, logica.calcularTotal(tipo,venda2), 0.1);
     }
 
 }

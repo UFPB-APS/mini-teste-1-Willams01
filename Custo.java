@@ -1,3 +1,3 @@
 public interface Custo {
-    double calcularCusto(Venda venda);
+    double calcularCusto(String tipo,Venda venda);
 }

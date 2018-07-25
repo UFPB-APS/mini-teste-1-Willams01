@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=estadoDoCliente
+comment0.target=void\ setEstadoDoCliente(java.lang.String)
+comment1.params=
+comment1.target=java.lang.String\ getEstadoDoCliente()
+comment2.params=data
+comment2.target=void\ setData(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getData()
+comment4.params=
+comment4.target=double\ getTotal()
+comment5.params=total
+comment5.target=void\ setTotal(double)
+numComments=6

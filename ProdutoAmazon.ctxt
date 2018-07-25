@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ProdutoAmazon()
+comment1.params=id\ descricao\ preco
+comment1.target=ProdutoAmazon(int,\ java.lang.String,\ double)
+comment2.params=percentual
+comment2.target=void\ reajustarPreco(double)
+numComments=3
